@@ -10,14 +10,16 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
-import Header from "./header"
+// import Header from "./header"
+import Nav from "./nav"
+
 import "./layout.css"
 
 const Container = styled.div`
   margin: 0 auto;
-  maxwidth: 960;
+  max-width: 960px;
   padding: 0px 1.0875rem 1.45rem;
-  paddingtop: 0;
+  padding-top: 0px;
 `
 
 const Layout = ({ children }) => {
@@ -33,7 +35,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Nav siteTitle={data.site.siteMetadata.title} />
       <Container>
         <main>{children}</main>
         <footer>

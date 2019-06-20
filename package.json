@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "brunotorres-dev",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "My personal portfolio site.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Bruno Torres Fabila<bruno.torres.fabila@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.1",
     "gatsby": "^2.9.11",
@@ -38,9 +38,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/BrunoTorresF/brunotorres-dev"
   }
 }
