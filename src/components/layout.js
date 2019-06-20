@@ -9,11 +9,32 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import {
+  faUser,
+  faAddressCard,
+  faUniversity,
+  faProjectDiagram,
+  faList,
+  faFilePdf,
+  faAtom,
+} from "@fortawesome/free-solid-svg-icons"
 
 // import Header from "./header"
 import Nav from "./nav"
 
 import "./layout.css"
+library.add(
+  fab,
+  faUser,
+  faAddressCard,
+  faUniversity,
+  faProjectDiagram,
+  faList,
+  faFilePdf,
+  faAtom
+)
 
 const Container = styled.div`
   margin: 0 auto;

@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -15,6 +14,16 @@ const IndexPage = () => (
     </h2>
     <p>This will be the home of my new portfolio site.</p>
     <p>It's currently under construction so please check back in a few days.</p>
+    <p>
+      Meanwhile, for any development-related questions, feel free to send me an
+      email at:{" "}
+      <a
+        style={{ textDecoration: "none" }}
+        href="mailto:contact@brunotorres.dev"
+      >
+        contact@brunotorres.dev
+      </a>
+    </p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>

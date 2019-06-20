@@ -1,15 +1,16 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const links = [
-  { text: "About", icon: "far fa-user" },
-  { text: "Experience", icon: "" },
-  { text: "Projects", icon: "" },
-  { text: "Skills", icon: "" },
-  { text: "Education", icon: "" },
-  { text: "Contact", icon: "" },
-  { text: "Resume", icon: "" },
+  { text: "About", icon: "user" },
+  { text: "Experience", icon: "list" },
+  { text: "Projects", icon: "project-diagram" },
+  { text: "Skills", icon: "atom" },
+  { text: "Education", icon: "university" },
+  { text: "Contact", icon: "address-card" },
+  { text: "Resume", icon: "file-pdf" },
 ]
 
 const NavMenu = styled.nav`
@@ -55,7 +56,7 @@ const Nav = ({ siteTitle }) => (
       {links.map(link => (
         <LiItems>
           <NavA href={`#${link.text}`}>
-            <i className={`${link.icon}`}></i>
+            <FontAwesomeIcon icon={link.icon} />
             <LinkSpan>{link.text}</LinkSpan>
           </NavA>
         </LiItems>
