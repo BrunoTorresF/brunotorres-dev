@@ -24,7 +24,14 @@ const IndexPage = () => (
         contact@brunotorres.dev
       </a>
     </p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    <div
+      style={{
+        display: `inline-block`,
+        minWidth: `300px`,
+        maxWidth: `300px`,
+        marginBottom: `1.45rem`,
+      }}
+    >
       <Image />
     </div>
   </Layout>
