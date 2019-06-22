@@ -41,8 +41,9 @@ const NavA = styled.a`
   display: block;
   line-height: 100%;
   padding: 10px 0 12px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   background-color: transparent;
+  text-decoration: none;
 `
 
 const LinkSpan = styled.span`
@@ -56,7 +57,7 @@ const Nav = ({ siteTitle }) => (
       {links.map(link => (
         <LiItems>
           <NavA href={`#${link.text}`}>
-            <FontAwesomeIcon icon={link.icon} />
+            <FontAwesomeIcon icon={link.icon} size="lg" />
             <LinkSpan>{link.text}</LinkSpan>
           </NavA>
         </LiItems>

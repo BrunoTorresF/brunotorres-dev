@@ -37,10 +37,14 @@ library.add(
 )
 
 const Container = styled.div`
+  position: absolute;
+  left: 190px;
+  height: 100%;
   margin: 0 auto;
   max-width: 960px;
   padding: 0px 1.875rem 1.45rem;
   padding-top: 0px;
+  text-align: center;
 `
 
 const Layout = ({ children }) => {
@@ -58,7 +62,7 @@ const Layout = ({ children }) => {
     <>
       <Nav siteTitle={data.site.siteMetadata.title} />
       <Container>
-        <main>{children}</main>
+        <main style={{ display: `inline-block` }}>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built by
           {` `}
