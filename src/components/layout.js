@@ -21,7 +21,6 @@ import {
   faAtom,
 } from "@fortawesome/free-solid-svg-icons"
 
-// import Header from "./header"
 import Nav from "./nav"
 
 import "./layout.css"
@@ -36,14 +35,19 @@ library.add(
   faAtom
 )
 
+const SiteWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+`
+
 const Container = styled.div`
-  position: absolute;
-  left: 190px;
-  height: 100%;
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0px 1.875rem 1.45rem;
-  padding-top: 0px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   text-align: center;
 `
 
@@ -60,17 +64,19 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Nav siteTitle={data.site.siteMetadata.title} />
-      <Container>
-        <main style={{ display: `inline-block` }}>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built by
-          {` `}
-          <a href="https://twitter.com/BrunoTFMX">Bruno</a> with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </Container>
+      <SiteWrapper>
+        <Nav siteTitle={data.site.siteMetadata.title} />
+        <Container>
+          <main>{children}</main>
+          <footer>
+            © {new Date().getFullYear()}, Built by
+            {` `}
+            <a href="https://twitter.com/BrunoTFMX">Bruno</a> with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </footer>
+        </Container>
+      </SiteWrapper>
     </>
   )
 }

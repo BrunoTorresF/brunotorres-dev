@@ -1,27 +1,20 @@
 import PropTypes from "prop-types"
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const links = [
-  { text: "About", icon: "user" },
-  { text: "Experience", icon: "list" },
-  { text: "Projects", icon: "project-diagram" },
-  { text: "Skills", icon: "atom" },
-  { text: "Education", icon: "university" },
-  { text: "Contact", icon: "address-card" },
-  { text: "Resume", icon: "file-pdf" },
+  { text: "About", icon: "user", to: "/" },
+  { text: "Experience", icon: "list", to: "/experience" },
+  { text: "Projects", icon: "project-diagram", to: "/projects" },
+  { text: "Resume", icon: "file-pdf", to: "/" },
 ]
 
 const NavMenu = styled.nav`
   background: #20034a;
-  left: 0;
-  top: 0;
-  margin: 0;
-  position: fixed;
-  width: 190px;
-  height: calc(100% + 60px);
-  padding-bottom: 60px;
+  width: 15vw;
+  height: 100vh;
 `
 const Title = styled.h1`
   color: white;
@@ -36,7 +29,7 @@ const LiItems = styled.li`
   float: none;
   transition: background-color 0.3s;
 `
-const NavA = styled.a`
+const StyledLink = styled(Link)`
   cursor: pointer;
   display: block;
   line-height: 100%;
@@ -56,10 +49,10 @@ const Nav = ({ siteTitle }) => (
     <ul>
       {links.map(link => (
         <LiItems>
-          <NavA href={`#${link.text}`}>
+          <StyledLink to={`${link.to}`}>
             <FontAwesomeIcon icon={link.icon} size="lg" />
             <LinkSpan>{link.text}</LinkSpan>
-          </NavA>
+          </StyledLink>
         </LiItems>
       ))}
     </ul>
