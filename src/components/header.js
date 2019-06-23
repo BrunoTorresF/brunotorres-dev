@@ -34,7 +34,7 @@ const HeroText = styled.h1`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: #f2fdff;
   text-shadow: -1px -1px 0 #000;
 `
 

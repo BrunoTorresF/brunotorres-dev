@@ -14,7 +14,7 @@ const links = [
 const NavMenu = styled.nav`
   background: #20034a;
   width: 15vw;
-  height: 100vh;
+  overflow: auto;
 `
 const Title = styled.h1`
   color: white;

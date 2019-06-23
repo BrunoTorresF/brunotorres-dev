@@ -38,6 +38,7 @@ library.add(
 const SiteWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   box-sizing: border-box;
   width: 100%;
   height: auto;
@@ -48,7 +49,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  text-align: center;
 `
 
 const Layout = ({ children }) => {
