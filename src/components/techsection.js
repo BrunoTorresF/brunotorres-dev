@@ -5,14 +5,14 @@ import Img from "gatsby-image"
 
 const SectionTitle = styled.h1`
   margin-top: 2%;
-  margin-left: 5%;
+  margin-left: 2.5%;
 `
 
 const SectionGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-gap: 10px;
-  margin-left: 5%;
+  justify-items: center;
+  margin-left: 2.5%;
   margin-right: 5%;
 `
 
@@ -21,7 +21,7 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   margin: 0 0 1em 0;
-  width: 100%;
+  width: 50%;
   transition: background 0.2s;
   &:hover {
     background: #f2fdff;
@@ -41,22 +41,22 @@ export const squareImage = graphql`
 const TechSection = () => {
   const query = useStaticQuery(graphql`
     query {
-      reactImg: file(relativePath: { eq: "react.png" }) {
+      reactImg: file(relativePath: { eq: "react-logo.png" }) {
         ...squareImage
       }
-      nodeImg: file(relativePath: { eq: "node.png" }) {
+      nodeImg: file(relativePath: { eq: "node-logo.png" }) {
         ...squareImage
       }
-      expressImg: file(relativePath: { eq: "express.png" }) {
+      expressImg: file(relativePath: { eq: "express-logo.png" }) {
         ...squareImage
       }
-      htmlImg: file(relativePath: { eq: "htmlcss.png" }) {
+      htmlImg: file(relativePath: { eq: "htmlcss-logo.png" }) {
         ...squareImage
       }
-      mysqlImg: file(relativePath: { eq: "mysql.png" }) {
+      mysqlImg: file(relativePath: { eq: "mysql-logo.png" }) {
         ...squareImage
       }
-      mongoImg: file(relativePath: { eq: "mongodb.png" }) {
+      mongoImg: file(relativePath: { eq: "mongodb-logo.png" }) {
         ...squareImage
       }
     }
