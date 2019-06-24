@@ -11,45 +11,40 @@ const IndexPage = () => (
     <Header />
     <TechSection />
     <section>
-      <h1 style={{ marginLeft: "5%" }}>Education</h1>
+      <h1 style={{ marginLeft: "2.5%" }}>Education</h1>
       <div
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(2, auto)",
-          marginLeft: "5%",
+          marginLeft: "2.5%",
         }}
       >
         <div>
-          <p>HolaCode</p>
-          <p>Date</p>
-          <p>degree</p>
+          <p>&lt;HolaCode /&gt;</p>
+          <p>Date: Nov. 2017 - April 2018</p>
+          <p>Fullstack Software Engineer</p>
         </div>
         <div>
           <p>Leeds University</p>
-          <p>Date</p>
-          <p>degree</p>
+          <p>Date: Sept. 2010 - June 2013</p>
+          <p>BSc Microbiology with Virology 2:1 Honours</p>
         </div>
       </div>
     </section>
     <section>
-      <h1 style={{ marginLeft: "5%" }}>Contact Me</h1>
-      <div style={{ marginLeft: "5%" }}>
-        <p>name</p>
-        <p>profile picture</p>
-        <p>phonenumber</p>
+      <h1 style={{ marginLeft: "2.5%" }}>Contact Me</h1>
+      <div style={{ marginLeft: "2.5%" }}>
+        <p>
+          For any development-related questions, feel free to send me an email
+          at:{" "}
+          <a
+            style={{ textDecoration: "none" }}
+            href="mailto:contact@brunotorres.dev"
+          >
+            contact@brunotorres.dev
+          </a>
+        </p>
       </div>
-    </section>
-    <section>
-      <p>
-        Meanwhile, for any development-related questions, feel free to send me
-        an email at:{" "}
-        <a
-          style={{ textDecoration: "none" }}
-          href="mailto:contact@brunotorres.dev"
-        >
-          contact@brunotorres.dev
-        </a>
-      </p>
     </section>
   </Layout>
 )
