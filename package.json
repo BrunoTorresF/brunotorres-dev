@@ -40,7 +40,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\""
+    "deploy": "./node_modules/.bin/firebase deploy --token \"$FIREBASE_TOKEN\""
   },
   "repository": {
     "type": "git",
