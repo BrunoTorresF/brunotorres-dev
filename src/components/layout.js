@@ -9,15 +9,46 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import {
+  faUser,
+  faAddressCard,
+  faUniversity,
+  faProjectDiagram,
+  faList,
+  faFilePdf,
+  faAtom,
+} from "@fortawesome/free-solid-svg-icons"
 
-import Header from "./header"
+import Nav from "./nav"
+
 import "./layout.css"
+library.add(
+  fab,
+  faUser,
+  faAddressCard,
+  faUniversity,
+  faProjectDiagram,
+  faList,
+  faFilePdf,
+  faAtom
+)
+
+const SiteWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+`
 
 const Container = styled.div`
-  margin: 0 auto;
-  maxwidth: 960;
-  padding: 0px 1.0875rem 1.45rem;
-  paddingtop: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 `
 
 const Layout = ({ children }) => {
@@ -33,17 +64,19 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Container>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built by
-          {` `}
-          <a href="https://twitter.com/BrunoTFMX">Bruno</a> with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </Container>
+      <SiteWrapper>
+        <Nav siteTitle={data.site.siteMetadata.title} />
+        <Container>
+          <main>{children}</main>
+          <footer>
+            © {new Date().getFullYear()}, Built by
+            {` `}
+            <a href="https://twitter.com/BrunoTFMX">Bruno</a> with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </footer>
+        </Container>
+      </SiteWrapper>
     </>
   )
 }

@@ -1,12 +1,17 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "brunotorres-dev",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "My personal portfolio site.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Bruno Torres Fabila<bruno.torres.fabila@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "babel-plugin-styled-components": "^1.10.1",
-    "gatsby": "^2.9.11",
+    "gatsby": "^2.9.10-process-develop.5",
+    "gatsby-cli": "^2.7.2",
     "gatsby-image": "^2.1.4",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^2.1.3",
@@ -34,13 +39,11 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/BrunoTorresF/brunotorres-dev"
   }
 }

@@ -1,42 +1,64 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 import React from "react"
+import styled from "styled-components"
+import Img from "gatsby-image"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const HeaderContainer = styled.header`
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  min-height: 300px;
+  overflow: hidden;
+`
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const BgImage = styled(Img)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  & > img {
+    object-fit: cover;
+    object-position: -50% -50%;
+  }
+`
 
-Header.defaultProps = {
-  siteTitle: ``,
+const HeroText = styled.h1`
+  font-size: 3em;
+  font-weight: 600;
+  position: absolute;
+  width: 100%;
+  padding: 0 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f2fdff;
+  text-shadow: -1px -1px 0 #000;
+`
+
+const Header = () => {
+  const query = useStaticQuery(graphql`
+    query {
+      headerImg: file(relativePath: { eq: "index-banner.png" }) {
+        childImageSharp {
+          fluid(maxHeight: 360) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <HeaderContainer>
+      <BgImage fluid={query.headerImg.childImageSharp.fluid} />
+      <HeroText>
+        Hi there! I'm a fullstack software engineer and web developer.
+      </HeroText>
+    </HeaderContainer>
+  )
 }
 
 export default Header
