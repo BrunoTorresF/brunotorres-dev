@@ -23,6 +23,13 @@ jobs:
       - run:
           name: Gatsby Build
           command: npm run build
+      
+  deploy-prod:
+    machine:
+      enabled: true
+    working_directory: ~/brunotorres-dev
+    steps:
+      - checkout
       - run:
           name: Firebase Deploy
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
@@ -34,9 +41,9 @@ workflows:
       - build:
           filters:
             branches:
-              ignore:
-                - develop
-                - /feature-.*/
+              only:
+                - master
+                - staging
       - deploy-stage:
           requires:
             - build
