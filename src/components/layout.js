@@ -41,14 +41,13 @@ const SiteWrapper = styled.div`
   align-items: stretch;
   box-sizing: border-box;
   width: 100%;
-  height: auto;
+  height: 100%;
 `
 
 const Container = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100vh;
 `
 
 const Layout = ({ children }) => {

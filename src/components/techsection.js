@@ -5,15 +5,15 @@ import Img from "gatsby-image"
 
 const SectionTitle = styled.h1`
   margin-top: 2%;
-  margin-left: 2.5%;
+  margin-left: 2%;
 `
 
 const SectionGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(6, auto);
   justify-items: center;
-  margin-left: 2.5%;
-  margin-right: 5%;
+  margin-left: 2%;
+  margin-right: 2.5%;
 `
 
 const Card = styled.div`
@@ -21,7 +21,7 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   margin: 0 0 1em 0;
-  width: 50%;
+  width: 95%;
   transition: background 0.2s;
   &:hover {
     background: #f2fdff;
@@ -64,7 +64,7 @@ const TechSection = () => {
 
   return (
     <section>
-      <SectionTitle style={{ marginLeft: "5%" }}>Technologies</SectionTitle>
+      <SectionTitle>Technologies</SectionTitle>
       <SectionGrid>
         <Card>
           <Img fluid={query.reactImg.childImageSharp.fluid} />
