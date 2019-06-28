@@ -249,7 +249,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 h1 {
   margin-left: 0;
@@ -259,7 +259,7 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.25rem;
   color: inherit;
   font-family: "Amiri", serif;
   font-weight: bold;
@@ -275,7 +275,7 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.25rem;
   color: inherit;
   font-family: "Amiri", serif;
   font-weight: bold;
@@ -291,7 +291,7 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.25rem;
   color: inherit;
   font-family: "Amiri", serif;
   font-weight: bold;
@@ -307,7 +307,7 @@ h4 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.25rem;
   color: inherit;
   font-family: "Amiri", serif;
   font-weight: bold;
@@ -323,7 +323,7 @@ h5 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.25rem;
   color: inherit;
   font-family: "Amiri", serif;
   font-weight: bold;
@@ -339,7 +339,7 @@ h6 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.25rem;
   color: inherit;
   font-family: "Amiri", serif;
   font-weight: bold;
@@ -355,7 +355,7 @@ hgroup {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.25rem;
 }
 ul {
   margin-left: 1.45rem;
@@ -409,7 +409,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 figure {
   margin-left: 0;
@@ -419,7 +419,7 @@ figure {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.25rem;
 }
 pre {
   margin-left: 0;
@@ -476,7 +476,7 @@ form {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1.2rem;
 }
 noscript {
   margin-left: 0;
@@ -519,7 +519,7 @@ address {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
 }
 b {
   font-weight: bold;

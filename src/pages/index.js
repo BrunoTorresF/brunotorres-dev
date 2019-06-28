@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -25,9 +26,11 @@ const EduCard = styled.div`
 `
 
 const EduImg = styled(Img)`
+  max-width: 100%;
+  max-height: 100%;
   width: 50%;
-  height: 50%;
-  margin-bottom: 0.2em;
+  height: auto;
+  margin-bottom: 0.5rem;
 `
 
 const IndexPage = () => {
@@ -61,7 +64,7 @@ const IndexPage = () => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, auto)",
+            gridTemplateColumns: "repeat(2, 1fr)",
             justifyItems: "center",
           }}
         >
@@ -80,19 +83,50 @@ const IndexPage = () => {
         </div>
       </section>
       <Divider />
-      <section>
+      <section
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginLeft: "2%",
+          marginTop: "2%",
+        }}
+      >
         <h1>Contact Me</h1>
+        <h4> You can reach me at:</h4>
         <div>
-          <p>
-            For any development-related questions, feel free to send me an email
-            at:{" "}
+          <span>
             <a
               style={{ textDecoration: "none" }}
               href="mailto:contact@brunotorres.dev"
             >
-              contact@brunotorres.dev
+              <FontAwesomeIcon icon={"envelope"} size="s" />
             </a>
-          </p>
+          </span>
+          <span>
+            <a
+              style={{ textDecoration: "none" }}
+              href="https://github.com/BrunoTorresF"
+            >
+              <FontAwesomeIcon icon={["fab", "github-square"]} size="s" />
+            </a>
+          </span>
+          <span>
+            <a
+              style={{ textDecoration: "none" }}
+              href="https://linkedin.com/in/BrunoTorresF"
+            >
+              <FontAwesomeIcon icon={["fab", "linkedin"]} size="s" />
+            </a>
+          </span>
+          <span>
+            <a
+              style={{ textDecoration: "none" }}
+              href="https://twitter.com/BrunoTFMX"
+            >
+              <FontAwesomeIcon icon={["fab", "twitter-square"]} size="s" />
+            </a>
+          </span>
         </div>
       </section>
     </Layout>
