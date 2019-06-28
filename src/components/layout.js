@@ -19,6 +19,7 @@ import {
   faList,
   faFilePdf,
   faAtom,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons"
 
 import Nav from "./nav"
