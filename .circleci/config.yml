@@ -47,9 +47,9 @@ workflows:
       - build:
           filters:
             branches:
-              ignore:
-                - develop
-                - /feature-.*/
+              only:
+                - master
+                - staging
       - deploy-stage:
           requires:
             - build
