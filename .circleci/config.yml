@@ -1,7 +1,7 @@
 # CircleCI Firebase Deployment Config
 version: 2
 jobs:
-  build:
+  build-deploy:
     docker:
       - image: circleci/node:12
     working_directory: ~/brunotorres-dev
@@ -23,19 +23,6 @@ jobs:
       - run:
           name: Gatsby Build
           command: npm run build
-
-  deploy-prod:
-    docker:
-      - image: circleci/node:12
-    working_directory: ~/brunotorres-dev
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            # Find a cache corresponding to this specific package-lock.json
-            - v1-npm-deps-{{ checksum "package-lock.json" }}
-            # Fallback cache to be used
-            - v1-npm-deps-
       - run:
           name: Firebase Deploy
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
@@ -50,15 +37,3 @@ workflows:
               only:
                 - master
                 - staging
-      - deploy-stage:
-          requires:
-            - build
-          filters:
-            branches:
-              only: staging
-      - deploy-prod:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
