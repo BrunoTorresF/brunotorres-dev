@@ -12,34 +12,34 @@ const links = [
 ]
 
 const NavMenu = styled.nav`
-  background: #20034a;
+  background: #582f73;
   width: 15vw;
 `
 const Title = styled.h1`
-  color: white;
+  color: #d5d0f2;
   text-align: center;
 `
 
 const LiItems = styled.li`
   list-style-type: none;
-  font-size: 16px;
-  line-height: 64px;
-  padding: 0;
-  float: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
   transition: background-color 0.3s;
 `
 const StyledLink = styled(Link)`
   cursor: pointer;
-  display: block;
-  line-height: 100%;
-  padding: 10px 0 12px;
+  color: #d5d0f2;
+  display: inline-block;
+  line-height: 1.5rem;
+  padding: 0.5rem 0;
   font-size: 1.2rem;
-  background-color: transparent;
   text-decoration: none;
 `
 
 const LinkSpan = styled.span`
-  color: white;
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: #d5d0f2;
 `
 
 const Nav = ({ siteTitle }) => (
