@@ -25,7 +25,7 @@ const BgImage = styled(Img)`
 `
 
 const HeroText = styled.h1`
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: 600;
   position: absolute;
   width: 100%;
@@ -34,7 +34,7 @@ const HeroText = styled.h1`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #f2fdff;
+  color: #9ad4d6;
   text-shadow: -1px -1px 0 #000;
 `
 

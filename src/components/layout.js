@@ -13,28 +13,16 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import {
   faUser,
-  faAddressCard,
-  faUniversity,
   faProjectDiagram,
   faList,
   faFilePdf,
-  faAtom,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons"
 
 import Nav from "./nav"
 
 import "./layout.css"
-library.add(
-  fab,
-  faUser,
-  faAddressCard,
-  faUniversity,
-  faProjectDiagram,
-  faList,
-  faFilePdf,
-  faAtom
-)
+library.add(fab, faUser, faProjectDiagram, faList, faFilePdf, faEnvelope)
 
 const SiteWrapper = styled.div`
   display: flex;
@@ -68,7 +56,7 @@ const Layout = ({ children }) => {
         <Nav siteTitle={data.site.siteMetadata.title} />
         <Container>
           <main>{children}</main>
-          <footer>
+          <footer style={{ margin: "0 auto" }}>
             © {new Date().getFullYear()}, Built by
             {` `}
             <a href="https://twitter.com/BrunoTFMX">Bruno</a> with
