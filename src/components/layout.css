@@ -231,6 +231,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
+  background-color: #9ad4d6;
   font-family: "Amiri", serif;
   font-weight: normal;
   word-wrap: break-word;
