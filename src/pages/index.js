@@ -40,6 +40,20 @@ const SplashImg = styled(BackgroundImage)`
   background-position: center center;
   background-repeat: none;
   background-size: contain;
+`
+
+const IconLink = styled.a`
+  text-decoration: none;
+  color: #7544a6;
+
+  :hover: {
+    transform: scale(1.1);
+  }
+`
+
+const Icon = styled(FontAwesomeIcon)`
+  :hover: {
+    transform: scale(1.1);
   }
 `
 
@@ -68,30 +82,18 @@ const IndexPage = () => {
             marginBottom: "1rem",
           }}
         >
-          <a
-            style={{ textDecoration: "none", color: "#7544A6" }}
-            href="mailto:bruno@brunotorres.dev"
-          >
-            <FontAwesomeIcon icon={"envelope"} size="2x" />
-          </a>
-          <a
-            style={{ textDecoration: "none", color: "#7544A6" }}
-            href="https://github.com/BrunoTorresF"
-          >
-            <FontAwesomeIcon icon={["fab", "github-square"]} size="2x" />
-          </a>
-          <a
-            style={{ textDecoration: "none", color: "#7544A6" }}
-            href="https://linkedin.com/in/BrunoTorresF"
-          >
-            <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
-          </a>
-          <a
-            style={{ textDecoration: "none", color: "#7544A6" }}
-            href="https://twitter.com/BrunoTFMX"
-          >
-            <FontAwesomeIcon icon={["fab", "twitter-square"]} size="2x" />
-          </a>
+          <IconLink href="mailto:bruno@brunotorres.dev">
+            <Icon icon={"envelope"} size="2x" />
+          </IconLink>
+          <IconLink href="https://github.com/BrunoTorresF">
+            <Icon icon={["fab", "github-square"]} size="2x" />
+          </IconLink>
+          <IconLink href="https://linkedin.com/in/BrunoTorresF">
+            <Icon icon={["fab", "linkedin"]} size="2x" />
+          </IconLink>
+          <IconLink href="https://twitter.com/BrunoTFMX">
+            <Icon icon={["fab", "twitter-square"]} size="2x" />
+          </IconLink>
         </div>
         <h2
           style={{
