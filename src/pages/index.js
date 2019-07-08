@@ -49,7 +49,7 @@ const IndexPage = () => {
       logo: file(relativePath: { eq: "btf-logo.png" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
