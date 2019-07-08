@@ -17,10 +17,22 @@ const Button = styled.button`
   margin: 1rem;
   padding: 0.25rem 1rem;
   border-radius: 3px;
+
+  :hover {
+    transform: scale(1.1);
+    background: #7544a6;
+  }
 `
 
 const DownloadLink = styled.a`
   text-decoration: none;
+  color: #7544a6;
+  :hover {
+    color: #dbcbd8;
+  }
+  :visited {
+    text-decoration: none;
+  }
 `
 
 const SplashImg = styled(BackgroundImage)`
