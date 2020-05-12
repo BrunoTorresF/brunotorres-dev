@@ -1,0 +1,27 @@
+@import '../palette.scss';
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh auto 5vh;
+  grid-template-areas:
+    'header'
+    'landing'
+    'footer';
+  height: 100vh;
+  background-image: linear-gradient(to right, $overlayStart, $overlayEnd),
+    url(../public/background-img-main.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 1245px) {
+    grid-template-rows: 5vh auto 2.5vh;
+    overflow: hidden;
+  }
+
+  @media only screen and (max-width: 700px) {
+    grid-template-rows: 2.5vh auto 2vh;
+    overflow: hidden;
+  }
+}
