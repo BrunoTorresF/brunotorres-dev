@@ -61,18 +61,16 @@
 
 @media only screen and (max-width: 700px) {
   .landing {
-    grid-template-columns: 1fr;
-    grid-template-areas: 'landing_content' 'landing_img';
-    grid-gap: 0;
-    align-content: start;
+    display: flex;
+    flex-direction: column;
   }
 
   .landing_content {
-    transform: scale(0.7);
+    flex: 1;
+    text-align: center;
   }
 
   .landing_img {
     transform: scale(0.65);
-    align-self: start;
   }
 }
