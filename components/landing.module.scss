@@ -44,6 +44,19 @@
   background-repeat: no-repeat;
 }
 
+.social {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+
+  & > a {
+    margin-right: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
 @media screen and (max-width: 1245px) {
   .landing {
     grid-template-columns: 1fr 1fr;
@@ -63,6 +76,10 @@
   .landing {
     display: flex;
     flex-direction: column;
+  }
+
+  .social {
+    justify-content: center;
   }
 
   .landing_content {
