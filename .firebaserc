@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "e-radar-244305"
+  },
+  "targets": {
+    "e-radar-244305": {
+      "hosting": {
+        "staging": [
+          "staging-brunotorres"
+        ],
+        "prod": [
+          "e-radar-244305"
+        ]
+      }
+    }
   }
 }
