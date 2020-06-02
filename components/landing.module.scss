@@ -6,6 +6,12 @@
   grid-template-columns: 1fr 600px 600px 1fr;
   grid-gap: 20px;
   grid-template-areas: '. landing_content landing_img .';
+  background-image: linear-gradient(to right, $overlayStart, $overlayEnd),
+    url(../public/background-img-main.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh;
 }
 
 .landing_content {

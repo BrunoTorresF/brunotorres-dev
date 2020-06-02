@@ -1,4 +1,4 @@
-@import '../palette.scss';
+@use '../palette.scss' as *;
 
 .header {
   display: grid;
@@ -6,6 +6,7 @@
   justify-items: end;
   align-items: center;
   margin: 0 10vw;
+  height: 10vh;
 }
 
 .nav_wrapper {

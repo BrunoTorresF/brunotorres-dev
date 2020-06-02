@@ -5,8 +5,6 @@ import Landing from '../components/landing';
 
 export default () => (
   <Layout>
-    <Header />
     <Landing />
-    <Footer />
   </Layout>
 );
